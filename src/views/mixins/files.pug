@@ -1,0 +1,13 @@
+mixin style(path)
+	link(rel="stylesheet", href=path)
+
+mixin styles(paths)
+	each path in paths
+		+style(path)
+
+mixin script(path)
+	script(src=path)
+
+mixin scripts(paths)
+	each path in paths
+		+script(path)

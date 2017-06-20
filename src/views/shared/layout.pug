@@ -1,0 +1,31 @@
+include ../mixins/index
+
+block vars
+	-
+		var title = "Техномарт";
+		var htmlClass;
+		var bodyClass;
+
+doctype html
+html(lang="ru", class=htmlClass)
+	head
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=960")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		title #{title}
+		block headStyles
+			+styles(["assets/css/index.css"])
+		block headScripts
+
+	body(class=bodyClass)
+		.page
+			.page__header
+				include header
+			.page__main
+				block content
+			.page__footer
+				.container footer
+
+		block bodyStyles
+		block bodyScripts
+			+script("assets/js/index.js")
