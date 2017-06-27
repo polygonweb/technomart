@@ -1,20 +1,34 @@
 var path = require('path');
 var webpack = require('webpack');
+
 const ENV = process.env.NODE_ENV;
 const isProduction = ENV === 'production';
+const isDev = !isProduction;
+const projectRootPath = process.cwd();
 
-module.exports = {
+var webpackConfig = {
+  context: path.resolve(projectRootPath, 'src', 'scripts'),
+
+  entry: isDev
+    ? [
+      'webpack-hot-middleware/client',
+      './main'
+    ]
+    : [
+      './main'
+    ],
+
   output: {
     filename: '[name].js',
     // filename: '[name].[hash].js',
-    // path: path.join(__dirname, '/build/'),
-    // publicPath: '/'
+    path: path.join(projectRootPath, 'build/assets/js/'),
+    publicPath: '/assets/js/'
   },
 
   resolve: {
     modules: [
-      path.join(__dirname, '/src/'),
-      path.join(__dirname, '/src/scripts/'),
+      path.join(projectRootPath, 'src', 'scripts'),
+      path.join(projectRootPath, 'node_modules'),
       'node_modules'
     ],
     extensions: [
@@ -25,10 +39,16 @@ module.exports = {
   },
 
   resolveLoader: {
-    modules: ['node_modules']
+    modules: [
+      path.join(projectRootPath, 'node_modules'),
+      'node_modules'
+    ],
+    extensions: [".js", ".json"]
   },
 
   devtool: isProduction ? false : 'source-map',
+  // watch: isProduction ? false : true,
+  watch: true,
 
   plugins: [
     // не дает перезаписать скрипты при наличии в них ошибок
@@ -40,7 +60,7 @@ module.exports = {
     new webpack.DefinePlugin({
       'NODE_ENV': JSON.stringify(ENV),
       'process.env': {
-        NODE_ENV: JSON.stringify(ENV)
+        'NODE_ENV': JSON.stringify(ENV)
       }
     })
   ].concat(isProduction ? [
@@ -59,7 +79,9 @@ module.exports = {
         unsafe: true
       }
     })
-  ] : []),
+  ] : [
+    new webpack.HotModuleReplacementPlugin()
+  ]),
 
   module: {
     rules: [
@@ -81,3 +103,5 @@ module.exports = {
     ]
   }
 };
+
+module.exports = webpackConfig;

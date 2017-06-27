@@ -2,7 +2,7 @@ const path = require('path');
 const gulp = require('gulp');
 
 // Создаем объект с gulp-плагинами и своми share-функциями
-var plugins = require('gulp-load-plugins')();
+let plugins = require('gulp-load-plugins')();
 Object.assign(plugins, {
   combiner: require('./utils/combiner'),
   browserSync: require('browser-sync').create()
@@ -22,7 +22,7 @@ tasksPathList.forEach(taskPath => defineTask({
 function watchFunc(done) {
   tasksPathList.forEach(taskPath => {
     let config = require(path.join(taskPath, 'config.js'));
-    if (config.watchFiles && config.taskName) {
+    if (!config.excludeWatch && config.watchFiles && config.taskName) {
       gulp.watch(config.watchFiles, gulp.parallel(config.taskName));
     }
   });

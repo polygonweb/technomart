@@ -4,8 +4,10 @@
 const path = require('path');
 const fs = require('fs');
 
+const errorHandler = require('./errorHandler');
+
 const defineTask = (gulp, plugins) => (config) => {
-    var localConfig = {};
+    let localConfig = {};
     try {
       localConfig = require(path.resolve(config.taskPath, 'config.js'));
       localConfig = typeof localConfig === 'function'
@@ -19,21 +21,7 @@ const defineTask = (gulp, plugins) => (config) => {
       taskConfig.onError = config.onError;
     } else {
       taskConfig.onError = function(error) {
-        !!plugins.browserSync && !!plugins.browserSync.active && plugins.browserSync.notify(`
-          <div style="max-width: 480px; text-align: left; padding: 10px; background: red; color: #fff">
-            <div>${taskConfig.taskName}</div>
-            <div>${error.message}</div>
-          </div>
-        `, 5000);
-        plugins.notify.onError({
-          title: 'Gulp: <%= options.taskName %>',
-          message: '<%= error.message %>',
-          templateOptions: {
-            taskName: taskConfig.taskName
-          }
-        })(error);
-        // this - ссылка на поток
-        // this.end()
+        errorHandler(gulp, plugins, taskConfig)(error);
         this.emit('end');
       }
     };
@@ -46,6 +34,7 @@ const defineTask = (gulp, plugins) => (config) => {
       } catch(e) {
         let util = plugins.util;
         util.log(util.colors.red(`Failed to load task in the directory ${taskPath}`));
+        util.log(util.colors.red(e));
         return done();
       }
     };
