@@ -10,7 +10,8 @@ module.exports = ({ localPath }) => ({
       'symbol': {
         dest: '',
         sprite: 'icons.svg',
-        bust: process.env.NODE_ENV === 'production', // хеши в названии файла
+        // bust: process.env.NODE_ENV === 'production', // хеши в названии файла
+        bust: false,
         render: {
           styl: {
             dest: 'svg-sprite.styl',
