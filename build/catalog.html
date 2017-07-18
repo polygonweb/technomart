@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=960">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="address=no">
+		<title>Техномарт | Каталог</title>
+		<link rel="stylesheet" href="assets/css/index.css"/>
+	</head>
+	<body>
+		<div class="page">
+			<div class="page__header">
+				<div class="top-panel">
+					<div class="container">
+						<h2 class="top-panel__logo"><a class="logo" href="/">Техномарт</a></h2>
+						<div class="top-panel__form">
+							<form class="search-form" action="" method="POST">
+								<div class="search-form__field">
+									<input class="search-form__input" type="text" placeholder="Поиск">
+									<svg class="icon icon_search search-form__icon">
+										<use xlink:href="assets/img/icons.svg#icon_search"></use>
+									</svg>
+								</div>
+							</form>
+						</div><a class="top-panel__btn panel-btn" href="javascript:void(0)" data-count="0">
+							<svg class="icon icon_bookmark panel-btn__icon">
+								<use xlink:href="assets/img/icons.svg#icon_bookmark"></use>
+							</svg><span class="panel-btn__text">Закладки</span></a><a class="top-panel__btn panel-btn" href="javascript:void(0)" data-count="3">
+							<svg class="icon icon_basket panel-btn__icon">
+								<use xlink:href="assets/img/icons.svg#icon_basket"></use>
+							</svg><span class="panel-btn__text">Корзина</span></a><a class="top-panel__btn panel-btn panel-btn_order" href="javascript:void(0)"><span class="panel-btn__text">Оформить заказ</span></a>
+					</div>
+				</div>
+				<header class="header">
+					<div class="container">
+						<div class="grid-row">
+							<div class="grid-cell grid-cell_4-12 header__cell">
+								<h1 class="site-name"><span class="site-name__text">Интернет-магазин <br>
+										строительных материалов <br>
+										и инструментов для ремонта</span></h1>
+							</div>
+							<div class="grid-cell grid-cell_4-12 header__cell header__cell_contacts"><a class="contacts-phone" href="tel:+78125550555">
+									<svg class="icon icon_phone contacts-phone__icon">
+										<use xlink:href="assets/img/icons.svg#icon_phone"></use>
+									</svg>+7 (812) 555-05-55</a>
+								<div class="contacts-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</div>
+							</div>
+							<div class="grid-cell grid-cell_4-12 header__cell">
+								<div class="user-area"><a class="user-btn user-btn_user" href="javascript:void(0)" title="Выйти">
+										<svg class="icon icon_user user-btn__icon">
+											<use xlink:href="assets/img/icons.svg#icon_user"></use>
+										</svg><span class="user-btn__text">Равшан Джамшутович</span>
+										<svg class="icon icon_logout user-btn__icon">
+											<use xlink:href="assets/img/icons.svg#icon_logout"></use>
+										</svg></a>
+									<ul class="user-menu">
+										<li class="user-menu__item"><a class="user-menu__link" href="javascript:void(0)">Мои заказы</a></li>
+										<li class="user-menu__item"><a class="user-menu__link" href="javascript:void(0)">Личный кабинет</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+										<nav class="main-nav">
+											<ul class="main-nav-list">
+												<li class="main-nav-list__item"><a class="main-nav-list__link" href="/index.html">Главная</a></li>
+												<li class="main-nav-list__item"><a class="main-nav-list__link" href="javascript:void(0)">Компания</a></li>
+												<li class="main-nav-list__item main-nav-list__item_active"><a class="main-nav-list__link" href="/catalog.html">Каталог</a></li>
+												<li class="main-nav-list__item"><a class="main-nav-list__link" href="javascript:void(0)">Новости</a></li>
+												<li class="main-nav-list__item"><a class="main-nav-list__link" href="javascript:void(0)">Спецпредложения</a></li>
+												<li class="main-nav-list__item"><a class="main-nav-list__link" href="javascript:void(0)">Доставка</a></li>
+												<li class="main-nav-list__item"><a class="main-nav-list__link" href="javascript:void(0)">Контакты</a></li>
+											</ul>
+										</nav>
+					</div>
+				</header>
+			</div>
+			<div class="page__main">
+				<div class="container">
+					<ul class="breadcrumbs">
+						<li class="breadcrumbs__item breadcrumbs__item"><a class="breadcrumbs__link_home" href="#404">
+								<svg class="icon icon_home breadcrumbs__home-icon">
+									<use xlink:href="assets/img/icons.svg#icon_home"></use>
+								</svg>На главную</a></li>
+						<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#404">Каталог</a></li>
+						<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#404">Инструмент</a></li>
+						<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#404">Перфораторы</a></li>
+					</ul>
+					<h1 class="page-title">ПЕРФОРАТОРЫ</h1>
+					<div class="grid-row">
+						<div class="grid-cell grid-cell_3-12">
+							<form class="product-filter" action="" method="GET" name="product-filter" enctype="application/x-www-form-urlencoded">
+								<div class="filter-head">
+									<div class="filter-head__label">Фильтр:</div>
+								</div>
+								<fieldset class="fieldset">
+									<legend class="fieldset__title">Цена:</legend>
+									<div class="range-block">
+										<div class="range-wrapper">
+											<div class="range">
+												<div class="range__fill" style="left: 10%; width: 65%;"></div>
+												<button class="range__drag range__drag_min" type="button" style="left: 10%;"></button>
+												<button class="range__drag range__drag_max" type="button" style="left: 75%;"></button>
+											</div>
+										</div>
+										<div class="range-values">
+											<div class="range-values__cell">
+												<input class="range-values__input" type="number" min="0" step="100" value="0" name="price-min">
+											</div>
+											<div class="range-values__cell range-values__cell_divider"></div>
+											<div class="range-values__cell">
+												<input class="range-values__input" type="number" min="0" step="100" value="30000" name="price-max">
+											</div>
+										</div>
+									</div>
+								</fieldset>
+								<fieldset class="fieldset">
+									<legend class="fieldset__title">ПРОИЗВОДИТЕЛИ:</legend>
+									<ul class="control-list">
+										<li class="control-list__item">
+											<label class="control  control_type_checkbox">
+												<input class="control__input" type="checkbox" name="vendors[]" value="BOSCH"/><span class="control__icon"></span><span class="control__content">BOSCH</span>
+											</label>
+										</li>
+										<li class="control-list__item">
+											<label class="control  control_type_checkbox">
+												<input class="control__input" type="checkbox" name="vendors[]" value="ИНТЕРСКОЛ"/><span class="control__icon"></span><span class="control__content">ИНТЕРСКОЛ</span>
+											</label>
+										</li>
+										<li class="control-list__item">
+											<label class="control  control_type_checkbox">
+												<input class="control__input" type="checkbox" name="vendors[]" value="Makita"/><span class="control__icon"></span><span class="control__content">Makita</span>
+											</label>
+										</li>
+										<li class="control-list__item">
+											<label class="control  control_type_checkbox">
+												<input class="control__input" type="checkbox" name="vendors[]" value="Makita"/><span class="control__icon"></span><span class="control__content">Makita</span>
+											</label>
+										</li>
+										<li class="control-list__item">
+											<label class="control  control_type_checkbox">
+												<input class="control__input" type="checkbox" name="vendors[]" value="Hitachi"/><span class="control__icon"></span><span class="control__content">Hitachi</span>
+											</label>
+										</li>
+									</ul>
+								</fieldset>
+								<fieldset class="fieldset">
+									<legend class="fieldset__title">ПИТАНИЕ:</legend>
+									<ul class="control-list">
+										<li class="control-list__item">
+											<label class="control  control_type_radio">
+												<input class="control__input" type="radio" name="power" value="accum"/><span class="control__icon"></span><span class="control__content">Аккумуляторные</span>
+											</label>
+										</li>
+										<li class="control-list__item">
+											<label class="control  control_type_radio">
+												<input class="control__input" type="radio" name="power" value="net"/><span class="control__icon"></span><span class="control__content">Сетевые</span>
+											</label>
+										</li>
+									</ul>
+								</fieldset>
+								<div class="product-filter__btn">
+									<button class="btn btn_light btn_full" type="submit">Показать</button>
+								</div>
+							</form>
+						</div>
+						<div class="grid-cell grid-cell_9-12">
+							<div class="filter-head filter-head_sticky">
+								<div class="grid-row">
+									<div class="grid-cell grid-cell_4-12">
+										<div class="filter-head__label">Сортировка:</div>
+									</div>
+									<div class="grid-cell grid-cell_8-12">
+										<div class="sort-type"><a class="sort-type__item sort-type__item_active" href="javascript:void(0)">По цене</a><a class="sort-type__item" href="javascript:void(0)">По типу</a><a class="sort-type__item" href="javascript:void(0)">По функционалу</a></div>
+										<div class="sort-order filter-head__sort-order"><a class="sort-order__item sort-order__item_active sort-order__item_asc" href="javascript:void(0)" title="По возврастанию"></a><a class="sort-order__item sort-order__item_desc" href="javascript:void(0)" title="По убыванию"></a></div>
+									</div>
+								</div>
+							</div>
+							<div class="product-grid">
+								<div class="grid-row">
+									<div class="product-grid__cell grid-cell grid-cell_4-12">
+										<div class="product-card is-new">
+											<div class="product-card__head"><img class="product-card__img" src="assets/img/content/BOSCH-BFG-9000.jpg" alt="">
+												<div class="product-card__tools">
+													<button class="product-card__tools-btn btn btn_fill" data-modal="{ &quot;target&quot;: &quot;#add-cart-message&quot;, &quot;action&quot;: &quot;open&quot; }">
+														<svg class="icon icon_basket">
+															<use xlink:href="assets/img/icons.svg#icon_basket"></use>
+														</svg>купить
+													</button>
+													<button class="product-card__tools-btn btn btn_outline">В закладки</button>
+												</div>
+											</div>
+											<h4 class="product-card__title">Перфоратор BOSCH BFG 2000</h4>
+											<del class="product-card__old-price">32500 Р.</del>
+											<div class="product-card__price-wrapper">
+												<div class="product-card__price">22500 Р.</div>
+											</div>
+										</div>
+									</div>
+									<div class="product-grid__cell grid-cell grid-cell_4-12">
+										<div class="product-card">
+											<div class="product-card__head"><img class="product-card__img" src="assets/img/content/BOSCH-BFG-3000.jpg" alt="">
+												<div class="product-card__tools">
+													<button class="product-card__tools-btn btn btn_fill" data-modal="{ &quot;target&quot;: &quot;#add-cart-message&quot;, &quot;action&quot;: &quot;open&quot; }">
+														<svg class="icon icon_basket">
+															<use xlink:href="assets/img/icons.svg#icon_basket"></use>
+														</svg>купить
+													</button>
+													<button class="product-card__tools-btn btn btn_outline">В закладки</button>
+												</div>
+											</div>
+											<h4 class="product-card__title">Перфоратор BOSCH BFG 3000</h4>
+											<del class="product-card__old-price">22500 Р.</del>
+											<div class="product-card__price-wrapper">
+												<div class="product-card__price">15500 Р.</div>
+											</div>
+										</div>
+									</div>
+									<div class="product-grid__cell grid-cell grid-cell_4-12">
+										<div class="product-card">
+											<div class="product-card__head"><img class="product-card__img" src="assets/img/content/BOSCH-BFG-6000.jpg" alt="">
+												<div class="product-card__tools">
+													<button class="product-card__tools-btn btn btn_fill" data-modal="{ &quot;target&quot;: &quot;#add-cart-message&quot;, &quot;action&quot;: &quot;open&quot; }">
+														<svg class="icon icon_basket">
+															<use xlink:href="assets/img/icons.svg#icon_basket"></use>
+														</svg>купить
+													</button>
+													<button class="product-card__tools-btn btn btn_outline">В закладки</button>
+												</div>
+											</div>
+											<h4 class="product-card__title">Перфоратор BOSCH BFG 6000</h4>
+											<del class="product-card__old-price">30500 Р.</del>
+											<div class="product-card__price-wrapper">
+												<div class="product-card__price">25500 Р.</div>
+											</div>
+										</div>
+									</div>
+									<div class="product-grid__cell grid-cell grid-cell_4-12">
+										<div class="product-card">
+											<div class="product-card__head"><img class="product-card__img" src="assets/img/content/BOSCH-BFG-2000.jpg" alt="">
+												<div class="product-card__tools">
+													<button class="product-card__tools-btn btn btn_fill" data-modal="{ &quot;target&quot;: &quot;#add-cart-message&quot;, &quot;action&quot;: &quot;open&quot; }">
+														<svg class="icon icon_basket">
+															<use xlink:href="assets/img/icons.svg#icon_basket"></use>
+														</svg>купить
+													</button>
+													<button class="product-card__tools-btn btn btn_outline">В закладки</button>
+												</div>
+											</div>
+											<h4 class="product-card__title">Перфоратор BOSCH BFG 2000</h4>
+											<div class="product-card__price-wrapper">
+												<div class="product-card__price">12500 Р.</div>
+											</div>
+										</div>
+									</div>
+									<div class="product-grid__cell grid-cell grid-cell_4-12">
+										<div class="product-card is-new">
+											<div class="product-card__head"><img class="product-card__img" src="assets/img/content/BOSCH-BFG-9000.jpg" alt="">
+												<div class="product-card__tools">
+													<button class="product-card__tools-btn btn btn_fill" data-modal="{ &quot;target&quot;: &quot;#add-cart-message&quot;, &quot;action&quot;: &quot;open&quot; }">
+														<svg class="icon icon_basket">
+															<use xlink:href="assets/img/icons.svg#icon_basket"></use>
+														</svg>купить
+													</button>
+													<button class="product-card__tools-btn btn btn_outline">В закладки</button>
+												</div>
+											</div>
+											<h4 class="product-card__title">Перфоратор BOSCH BFG 2000</h4>
+											<del class="product-card__old-price">32500 Р.</del>
+											<div class="product-card__price-wrapper">
+												<div class="product-card__price">22500 Р.</div>
+											</div>
+										</div>
+									</div>
+									<div class="product-grid__cell grid-cell grid-cell_4-12">
+										<div class="product-card">
+											<div class="product-card__head"><img class="product-card__img" src="assets/img/content/BOSCH-BFG-3000.jpg" alt="">
+												<div class="product-card__tools">
+													<button class="product-card__tools-btn btn btn_fill" data-modal="{ &quot;target&quot;: &quot;#add-cart-message&quot;, &quot;action&quot;: &quot;open&quot; }">
+														<svg class="icon icon_basket">
+															<use xlink:href="assets/img/icons.svg#icon_basket"></use>
+														</svg>купить
+													</button>
+													<button class="product-card__tools-btn btn btn_outline">В закладки</button>
+												</div>
+											</div>
+											<h4 class="product-card__title">Перфоратор BOSCH BFG 3000</h4>
+											<del class="product-card__old-price">22500 Р.</del>
+											<div class="product-card__price-wrapper">
+												<div class="product-card__price">15500 Р.</div>
+											</div>
+										</div>
+									</div>
+									<div class="product-grid__cell grid-cell grid-cell_4-12">
+										<div class="product-card">
+											<div class="product-card__head"><img class="product-card__img" src="assets/img/content/BOSCH-BFG-6000.jpg" alt="">
+												<div class="product-card__tools">
+													<button class="product-card__tools-btn btn btn_fill" data-modal="{ &quot;target&quot;: &quot;#add-cart-message&quot;, &quot;action&quot;: &quot;open&quot; }">
+														<svg class="icon icon_basket">
+															<use xlink:href="assets/img/icons.svg#icon_basket"></use>
+														</svg>купить
+													</button>
+													<button class="product-card__tools-btn btn btn_outline">В закладки</button>
+												</div>
+											</div>
+											<h4 class="product-card__title">Перфоратор BOSCH BFG 6000</h4>
+											<del class="product-card__old-price">30500 Р.</del>
+											<div class="product-card__price-wrapper">
+												<div class="product-card__price">25500 Р.</div>
+											</div>
+										</div>
+									</div>
+									<div class="product-grid__cell grid-cell grid-cell_4-12">
+										<div class="product-card">
+											<div class="product-card__head"><img class="product-card__img" src="assets/img/content/BOSCH-BFG-2000.jpg" alt="">
+												<div class="product-card__tools">
+													<button class="product-card__tools-btn btn btn_fill" data-modal="{ &quot;target&quot;: &quot;#add-cart-message&quot;, &quot;action&quot;: &quot;open&quot; }">
+														<svg class="icon icon_basket">
+															<use xlink:href="assets/img/icons.svg#icon_basket"></use>
+														</svg>купить
+													</button>
+													<button class="product-card__tools-btn btn btn_outline">В закладки</button>
+												</div>
+											</div>
+											<h4 class="product-card__title">Перфоратор BOSCH BFG 2000</h4>
+											<div class="product-card__price-wrapper">
+												<div class="product-card__price">12500 Р.</div>
+											</div>
+										</div>
+									</div>
+									<div class="product-grid__cell grid-cell grid-cell_4-12">
+										<div class="product-card is-new">
+											<div class="product-card__head"><img class="product-card__img" src="assets/img/content/BOSCH-BFG-9000.jpg" alt="">
+												<div class="product-card__tools">
+													<button class="product-card__tools-btn btn btn_fill" data-modal="{ &quot;target&quot;: &quot;#add-cart-message&quot;, &quot;action&quot;: &quot;open&quot; }">
+														<svg class="icon icon_basket">
+															<use xlink:href="assets/img/icons.svg#icon_basket"></use>
+														</svg>купить
+													</button>
+													<button class="product-card__tools-btn btn btn_outline">В закладки</button>
+												</div>
+											</div>
+											<h4 class="product-card__title">Перфоратор BOSCH BFG 2000</h4>
+											<del class="product-card__old-price">32500 Р.</del>
+											<div class="product-card__price-wrapper">
+												<div class="product-card__price">22500 Р.</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="paging"><a class="paging__link paging__link_prev paging__link_hide" href="javascript:void(0)">Предыдущая</a><a class="paging__link paging__link_active" href="javascript:void(0)">1</a><a class="paging__link" href="javascript:void(0)">2</a><a class="paging__link" href="javascript:void(0)">3</a><a class="paging__link paging__link_next" href="javascript:void(0)">Следующая</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<section class="product-desc">
+					<div class="container">
+						<h4 class="product-desc__title">ПАРА СЛОВ О ПЕРФОРАТОРАХ</h4>
+						<p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
+					</div>
+				</section>
+				<div class="modal" id="add-cart-message">
+					<div class="modal__outer">
+						<div class="modal__inner">
+							<div class="modal__dialog">
+								<button class="modal__close" type="button" title="Закрыть"></button>
+								<form class="form">
+									<div class="form__head">
+										<svg class="icon icon_round-check form__icon" width="66" height="66">
+											<use xlink:href="assets/img/icons.svg#icon_round-check"></use>
+										</svg>
+										<h4 class="form__title">Товар добавлен в корзину!</h4>
+									</div>
+									<div class="form__foot">
+										<div class="grid-row">
+											<div class="grid-cell grid-cell_6-12"><a class="btn btn_full" href="javascript:void(0)">Оформить заказ</a></div>
+											<div class="grid-cell grid-cell_6-12">
+												<button class="btn btn_full btn_light" type="button">Продолжить покупки</button>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="page__footer">
+				<footer class="page-footer">
+					<div class="page-footer__top">
+						<div class="container">
+							<div class="page-footer__inner"><a class="page-footer__logo logo logo_big" href="/">Техномарт</a>
+								<ul class="foot-menu page-footer__main-menu">
+									<li class="foot-menu__item"><a class="foot-menu__link" href="javascript:void(0)">Компания</a></li>
+									<li class="foot-menu__item"><a class="foot-menu__link" href="javascript:void(0)">Новости</a></li>
+									<li class="foot-menu__item"><a class="foot-menu__link" href="/catalog.html">Каталог</a></li>
+									<li class="foot-menu__item"><a class="foot-menu__link" href="javascript:void(0)">Доставка</a></li>
+									<li class="foot-menu__item"><a class="foot-menu__link" href="javascript:void(0)">Контакты</a></li>
+								</ul>
+							</div>
+							<div class="page-footer__inner">
+								<div class="page-footer__address">
+									<div>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</div>
+									<div><a class="page-footer__address-link" href="tel:+78125550555">+7 (812) 555-05-55</a></div>
+								</div>
+								<ul class="foot-menu foot-menu_sub">
+									<li class="foot-menu__item"><a class="foot-menu__link" href="javascript:void(0)">Материалы</a></li>
+									<li class="foot-menu__item"><a class="foot-menu__link" href="javascript:void(0)">Техника</a></li>
+									<li class="foot-menu__item"><a class="foot-menu__link" href="javascript:void(0)">Инструмент</a></li>
+									<li class="foot-menu__item"><a class="foot-menu__link" href="javascript:void(0)">Спецпредложения</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="page-footer__bottom">
+						<div class="container page-footer__inner">
+							<div class="page-footer__copy">
+								<div>© 2010–2016 Компания «Техномарт»</div>
+								<div>Все права защищены</div>
+							</div>
+							<div class="contacts page-footer__contacts">
+								<div class="contact-block">
+									<div class="contact-block__label">Обратная связь:</div><a class="contact-block__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+								</div>
+								<div class="contact-block">
+									<div class="contact-block__label">Разработано —</div><a class="contact-block__link" href="https://htmlacademy.ru" target="_blan">htmlacademy.ru</a>
+								</div>
+							</div>
+							<div class="page-footer__social">
+								<ul class="social-list">
+									<li class="social-list__item"><a class="social-list__link" href="javascript:void(0)" title="Вконтакте">
+											<svg class="icon icon_vk social-list__icon">
+												<use xlink:href="assets/img/icons.svg#icon_vk"></use>
+											</svg></a></li>
+									<li class="social-list__item"><a class="social-list__link" href="javascript:void(0)" title="Фейсбук">
+											<svg class="icon icon_facebook social-list__icon">
+												<use xlink:href="assets/img/icons.svg#icon_facebook"></use>
+											</svg></a></li>
+									<li class="social-list__item"><a class="social-list__link" href="javascript:void(0)" title="Инстаграм">
+											<svg class="icon icon_instagram social-list__icon">
+												<use xlink:href="assets/img/icons.svg#icon_instagram"></use>
+											</svg></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</footer>
+			</div>
+		</div>
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>
