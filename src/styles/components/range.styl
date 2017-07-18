@@ -1,0 +1,74 @@
+.range-wrapper
+  margin-bottom 9px
+  padding 39px 20px
+  overflow hidden
+  border-radius 0 0 3px 3px
+  background #f7f3ec
+
+.range
+  position relative
+  height 2px
+  background #d7dcde
+
+  // &__input
+  //   position absolute
+  //   opacity 0
+  //   left 100%
+  //   top 0
+
+  &__fill
+    position absolute
+    top 0
+    height 100%
+    background #00ca74
+
+  &__drag
+    position absolute
+    top 50%
+    transform translate(-50%, -50%)
+    box-sizing content-box
+    padding 0
+    width  4px
+    height 4px
+    border 8px solid #fff
+    border-radius 50%
+    background #ababab
+    box-shadow 0 2px rgba(#000, 0.1)
+    cursor pointer
+    transition border-color .2s
+
+    &:hover
+      border-color #e5e5e5
+
+
+
+
+
+
+.range-values
+  display table
+  border-collapse collapse
+  width 100%
+
+
+  &__cell
+    display table-cell
+    vertical-align middle
+
+    &_divider
+      padding-left  10px
+      padding-right 10px
+
+      &::before
+        content " — "
+
+
+  &__input
+    box-sizing border-box
+    width 100%
+    border 1px solid transparent
+    height 38px
+    padding 0 5px
+    text-align center
+    border-radius 3px
+    background #f7f3ec

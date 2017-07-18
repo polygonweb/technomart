@@ -1,0 +1,21 @@
+.top-panel
+	.container
+		h2.top-panel__logo
+			a.logo(href="/") Техномарт
+
+		.top-panel__form
+			form.search-form(action="", method="POST")
+				.search-form__field
+					input.search-form__input(type="text", placeholder="Поиск")
+					+icon('search').search-form__icon
+
+		a.top-panel__btn.panel-btn(href="javascript:void(0)", data-count="0")
+			+icon('bookmark').panel-btn__icon
+			span.panel-btn__text Закладки
+
+		a.top-panel__btn.panel-btn(href="javascript:void(0)", data-count="3")
+			+icon('basket').panel-btn__icon
+			span.panel-btn__text Корзина
+
+		a.top-panel__btn.panel-btn.panel-btn_order(href="javascript:void(0)")
+			span.panel-btn__text Оформить заказ

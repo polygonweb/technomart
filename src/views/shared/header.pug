@@ -1,21 +1,51 @@
-.top-panel
+include nav
+
+-
+	var navItems = [
+		{text: "Главная", link: "/index.html"},
+		{text: "Компания", link: "javascript:void(0)"},
+		{text: "Каталог", link: "/catalog.html"},
+		{text: "Новости", link: "javascript:void(0)"},
+		{text: "Спецпредложения", link: "javascript:void(0)"},
+		{text: "Доставка", link: "javascript:void(0)"},
+		{text: "Контакты", link: "javascript:void(0)"}
+	];
+
+header.header
 	.container
-		h1.top-panel__logo
-			a.logo(href="/") Техномарт
+		.grid-row
+			.grid-cell.grid-cell_4-12.header__cell
+				h1.site-name
+					span.site-name__text
+						| Интернет-магазин #[br]
+						| строительных материалов #[br]
+						| и инструментов для ремонта
 
-		.top-panel__form
-			form.search-form(action="", method="POST")
-				.search-form__field
-					input.search-form__input(type="text", placeholder="Поиск")
-					+icon('search').search-form__icon
+			.grid-cell.grid-cell_4-12.header__cell.header__cell_contacts
+				a(href="tel:+78125550555").contacts-phone
+					+icon("phone").contacts-phone__icon
+					| +7 (812) 555-05-55
+				.contacts-address г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
 
-		a.top-panel__btn.panel-btn(href="javascript:void(0)", data-count="0")
-			+icon('bookmark').panel-btn__icon
-			span.panel-btn__text Закладки
+			.grid-cell.grid-cell_4-12.header__cell
+				.user-area
+					if user
+						a(href="javascript:void(0)", title="Выйти").user-btn.user-btn_user
+							+icon("user").user-btn__icon
+							span.user-btn__text #{user.name || ''}
+							+icon("logout").user-btn__icon
 
-		a.top-panel__btn.panel-btn(href="javascript:void(0)", data-count="3")
-			+icon('basket').panel-btn__icon
-			span.panel-btn__text Корзина
+						ul.user-menu
+							li.user-menu__item
+								a.user-menu__link(href="javascript:void(0)") Мои заказы
+							li.user-menu__item
+								a.user-menu__link(href="javascript:void(0)") Личный кабинет
+					else
+						a(href="javascript:void(0)").user-btn
+							+icon("login").user-btn__icon
+							span.user-btn__text Войти
+						a(href="javascript:void(0)").user-btn
+							span.user-btn__text Регистрация
 
-		a.top-panel__btn.panel-btn.panel-btn_order(href="javascript:void(0)")
-			span.panel-btn__text Оформить заказ
+		+nav(navItems, pageTitle || "")
+

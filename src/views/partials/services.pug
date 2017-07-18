@@ -1,0 +1,54 @@
+section.services
+	.container
+		h2.services__title Сервисы
+
+		p
+			| Хороший интернет-магазин отличается от плохого не только ценами!
+			br
+			| Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
+
+		.services-info
+			input.services-info__control(type="radio", name="service", id="delivery", checked)
+			input.services-info__control(type="radio", name="service", id="guarantee")
+			input.services-info__control(type="radio", name="service", id="credit")
+
+			.services-info__nav
+				label.services-info__link(for="delivery") Доставка
+				label.services-info__link(for="guarantee") Гарантия
+				label.services-info__link(for="credit") Кредит
+
+			.services-info__content
+				.services-info__item
+					img.services-info__img(width="468" height="261" src="assets/img/delivery.png", srcset="assets/img/delivery@2x.png 2x")
+					h4.services-info__title Доставка
+					p
+						| Мы с удовольствием доставим ваш товар прямо
+						br
+						| к вашему подъезду совершенно бесплатно!
+						br
+						| Ведь мы неплохо заработаем,
+						br
+						| поднимая его на ваш на этаж!
+
+				.services-info__item
+					img.services-info__img(width="389" height="283" src="assets/img/guarantee.png", srcset="assets/img/guarantee@2x.png 2x")
+					h4.services-info__title Гарантия
+					p
+						| Если купленный у нас товар поломается или заискрит,
+						br
+						| а также в случае пожара, спровоцированного его возгаранием,
+						br
+						| вы всегда можете быть уверены в нашей гарантии. Мы обменяем
+						br
+						| сгоревший товар на новый.
+						br
+						| Дом уж восстановите как-нибудь сами.
+
+				.services-info__item
+					img.services-info__img(width="465" height="285" src="assets/img/credit.png", srcset="assets/img/credit@2x.png 2x")
+					h4.services-info__title Кредит
+					p
+						| Залезть в долговую яму стало проще!
+						br
+						| Кредитные консультанты придут вам на помощь.
+					a(href="javascript:void(0)").btn.services-info__btn Отправить заявку

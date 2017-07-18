@@ -1,0 +1,21 @@
+.list
+  margin 0
+  padding 0
+  list-style none
+  font 18px/20px "Cuprum", sans-serif
+
+  &__item
+    position relative
+    padding-left 36px
+
+    & + &
+      margin-top 20px
+
+    &::before
+      content ""
+      position absolute
+      left 0
+      top 0.45em
+      width 25px
+      height 2px
+      background $color-red

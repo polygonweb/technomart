@@ -1,0 +1,47 @@
+.paging
+  position sticky
+  bottom 0
+  padding 30px 0
+  background hsla(0, 0%, 100%, 0.96)
+
+  &::after
+    content ""
+    display table
+    clear both
+
+
+  &__link
+    float left
+    padding 12px 15px 11px
+    border 1px solid #e5e5e5
+    text-align center
+    border-radius 3px
+    text-decoration none
+    color inherit
+    line-height 1
+
+    &:not(:last-child)
+      margin-right 10px
+
+    &:hover
+      border-color #bdc6ca
+
+    &:active
+      border-color $color-red
+
+    &_active
+      color #fff
+      background $color-red
+      border-color $color-red
+      pointer-events none
+
+      &:hover
+        border-color $color-red
+
+    &_prev
+    &_next
+      padding-left  30px
+      padding-right 30px
+
+    &_hide
+      display none

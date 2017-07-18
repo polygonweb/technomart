@@ -1,0 +1,9 @@
+mixin modal()
+	-
+		var attrs = attributes;
+	.modal(class=attrs.class, id=attrs.id)
+		.modal__outer
+			.modal__inner
+				.modal__dialog
+					button.modal__close(type="button", title="Закрыть")
+					block

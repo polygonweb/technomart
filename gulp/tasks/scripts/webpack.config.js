@@ -43,12 +43,11 @@ var webpackConfig = {
       path.join(projectRootPath, 'node_modules'),
       'node_modules'
     ],
-    extensions: [".js", ".json"]
+    extensions: ['.js', '.json']
   },
 
   devtool: isProduction ? false : 'source-map',
-  // watch: isProduction ? false : true,
-  watch: true,
+  watch: isProduction ? false : true,
 
   plugins: [
     // не дает перезаписать скрипты при наличии в них ошибок

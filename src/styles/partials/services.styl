@@ -1,0 +1,151 @@
+.services
+  padding 60px 0 0
+  background #f2f6f8
+
+  p
+    margin 26px 0
+    line-height 24px
+
+  &__title
+    margin 0
+    text-transform uppercase
+    font-size 30px
+    font-family "Cuprum", sans-serif
+
+
+
+activeLinkState()
+  pointer-events none
+  color $color-text-dark
+  background #fff
+
+activeItemState()
+  position relative
+  z-index auto
+  // display block
+  opacity 1
+  animation showServiceItem .7s both
+
+@keyframes showServiceItem
+    0%
+      opacity 0
+    100%
+      opacity 1
+
+$len = 3;
+
+.services-info
+  $sideWidth = 241px
+
+  position relative
+  padding-bottom 54px
+
+  &::after
+    content ""
+    display table
+    clear both
+
+  &__control
+    position absolute
+    z-index -1
+    top 0
+    left 0
+    opacity 0
+
+  &__nav
+    position relative
+    float left
+    padding 48px 0
+    width $sideWidth
+    overflow hidden
+    font-size 21px
+    line-height 30px
+    font-weight normal
+    font-family "Cuprum", sans-serif
+
+    &::before
+      content ""
+      position absolute
+      top    -50%
+      bottom -50%
+      left 100%
+      width 100%
+      border-radius 50%
+      box-shadow: -10px 0 14px rgba(#000, 0.3);
+      pointer-events none
+
+  &__link
+    display block
+    padding 15px 23px
+    border-bottom 1px solid $color-dark
+    border-top 1px solid #405069
+    text-decoration none
+    color #fff
+    background $color-text-dark
+    cursor pointer
+
+    &:first-child
+      border-top 0
+
+    &:last-child
+      border-bottom 0
+
+    &:hover
+      background $color-dark
+
+    // &_active
+    // &_active:hover
+    //   pointer-events none
+    //   color $color-text-dark
+    //   background #fff
+
+  &__content
+    margin-left $sideWidth
+    padding 46px 80px
+    min-height 208px
+    padding-right 0
+
+  &__item
+    position absolute
+    z-index -1
+    top 0
+    left 0
+    opacity 0
+
+    p
+      max-width 380px
+      position relative
+
+    // &_active
+    //   position relative
+    //   opacity 1
+    //   animation showServiceItem 1s both
+
+  &__title
+    margin 0
+    position relative
+    font-size 36px
+    line-height 1
+    font-weight normal
+    font-family "Cuprum", sans-serif
+    text-transform uppercase
+    color $color-text-dark
+
+  &__img
+    position absolute
+    right 0
+    top 0
+    // bottom 0
+
+  &__btn
+    width 195px
+
+  for index in (1..$len)
+    &__control:nth-of-type({index}):checked ~ &__nav &__link:nth-of-type({index})
+      activeLinkState()
+
+    &__control:nth-of-type({index}):checked ~ &__content  &__item:nth-of-type({index})
+      activeItemState()
+
+
+

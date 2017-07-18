@@ -1,0 +1,51 @@
+.user-area
+  // text-align right
+
+.user-btn
+  display inline-block
+  vertical-align middle
+  box-sizing border-box
+  overflow hidden
+  padding: 12px;
+  font-size 21px
+  line-height 1
+  text-align center
+  text-decoration none
+  color #000
+  background-color #fff
+
+  &__icon
+    margin-top -2px
+    vertical-align top
+    font-size 24px
+    color $color-text-light
+
+  &__text
+    margin 0 14px
+
+  & + &
+    margin-left 10px
+
+  &:hover
+    color $color-red
+
+  &:hover &__icon
+    color $color-text-dark
+
+  &:active
+    color rgba(0, 0, 0, 0.3)
+
+  &:active &__icon
+    color $color-text-light
+
+  &_user
+    width 100%
+    text-align left
+
+  &_user &__icon:nth-of-type(1)
+    float left
+    margin-top 0
+    font-size 19px
+
+  &_user &__icon:nth-of-type(2)
+    float right

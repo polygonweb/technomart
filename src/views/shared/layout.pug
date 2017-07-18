@@ -2,9 +2,10 @@ include ../mixins/index
 
 block vars
 	-
-		var title = "Техномарт";
 		var htmlClass;
 		var bodyClass;
+		var pageTitle = "";
+		var user;
 
 doctype html
 html(lang="ru", class=htmlClass)
@@ -12,19 +13,25 @@ html(lang="ru", class=htmlClass)
 		meta(charset="utf-8")
 		meta(name="viewport", content="width=960")
 		meta(http-equiv="X-UA-Compatible", content="IE=edge")
-		title #{title}
+		meta(name="format-detection" content="telephone=no")
+		meta(name="format-detection" content="address=no")
+		title #{"Техномарт" + (!!pageTitle ? (" | " + pageTitle) : "")}
 		block headStyles
 			+styles(["assets/css/index.css"])
 		block headScripts
 
 	body(class=bodyClass)
+
 		.page
 			.page__header
+				include top-panel
 				include header
+
 			.page__main
 				block content
+
 			.page__footer
-				.container footer
+				include footer
 
 		block bodyStyles
 		block bodyScripts

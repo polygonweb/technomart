@@ -1,0 +1,56 @@
+$active-state
+  color hsla(0, 0%, 100%, 0.5)
+  background $color-dark-deep
+
+$hover-state
+  background $color-dark
+
+.main-nav
+  margin-bottom 60px
+  display inline-block
+  vertical-align top
+  box-sizing border-box
+  width 100%
+  padding 0 20px
+  border-bottom 5px solid $color-dark
+  background $color-text-dark
+  color #fff
+
+.main-nav-list
+  margin 0
+  padding 0
+  list-style-type none
+  display table
+  width 100%
+  border-collapse collapse
+
+  &__link
+    display block
+    padding 18px 30px
+    color inherit
+    text-decoration none
+    font-size 17px
+
+    &:hover
+      @extend $hover-state
+
+    &:active
+      @extend $active-state
+
+  &__item
+    position relative
+    display table-cell
+    vertical-align top
+
+  &__item_active::after
+    content ""
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+
+  &__item_active &__link
+    @extend $hover-state
+    pointer-events none
+

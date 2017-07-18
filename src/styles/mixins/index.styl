@@ -15,8 +15,8 @@ webfont($family, $file, $weight=normal, $style=normal)
 
 
 // https://css-tricks.com/snippets/css/retina-display-media-query/
-retina()
-  @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi)
+retina(factor = 1.5)
+  @media (-webkit-min-device-pixel-ratio: factor), (min-resolution: factor * 96dpi)
     {block}
 
 

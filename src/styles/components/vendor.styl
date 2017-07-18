@@ -1,0 +1,30 @@
+.vendor
+    position relative
+    margin-bottom 20px
+    display block
+    box-sizing border-box
+    overflow hidden
+    height 145px
+    border 1px solid #e5e5e5
+    text-decoration none
+    background #fff
+    transition .2s
+
+    &__img
+      position absolute
+      top 0
+      bottom 0
+      left 0
+      right 0
+      margin auto
+      transition inherit
+
+    &:hover
+      box-shadow 0 10px 25px rgba($color-dark, 0.5)
+
+    &:active
+      box-shadow 0 4px 10px rgba($color-dark, 0.5)
+
+    &:active &__img
+      opacity .3
+

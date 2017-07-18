@@ -2,7 +2,8 @@ module.exports = {
   taskName: 'server',
   description: 'Запуск сервера Browsersync для разработки',
   webpackConfig: require('../scripts/webpack.config.js'),
-  enableHot: true,
+  enableHot: process.env.NODE_ENV === 'development',
+  isProd: process.env.NODE_ENV === 'production',
   bsConfig: {
     server: {
       baseDir: 'build',
@@ -12,7 +13,7 @@ module.exports = {
     port: 3000,
     notify: true,
     injectChanges: true,
-    open: true,
+    open: false,
     tunnel: false
   }
 }

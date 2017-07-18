@@ -27,17 +27,20 @@ module.exports = (gulp, plugins, config) => {
   return (done) => {
     browserSync
       .init(Object.assign({}, config.bsConfig || {}, {
-        middleware: [
-          webpackDevMiddleware(bundler, {
-            publicPath: webpackConfig.output.publicPath,
-            stats: { colors: true }
-          })
-        ].concat(
-          config.enableHot
-           ? webpackHotMiddleware(bundler, {
-            reload: true
-           })
-           : []
+        middleware: [].concat(!config.isProd
+          ? [
+            webpackDevMiddleware(bundler, {
+              publicPath: webpackConfig.output.publicPath,
+              stats: { colors: true }
+            })
+          ]
+          : []
+          ).concat(
+            config.enableHot
+             ? webpackHotMiddleware(bundler, {
+              reload: true
+             })
+             : []
         ),
         plugins: [
           'bs-fullscreen-message',

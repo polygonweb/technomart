@@ -37,6 +37,10 @@ module.exports = {
     'css-mqpacker': {
       sort: sortMediaQueries
       // sort: true
+    },
+    'postcss-csso': {
+      restructure: false,
+      comments: false
     }
   }
 };

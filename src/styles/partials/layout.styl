@@ -22,11 +22,31 @@ body
     display block
 
 /**
- * Основной центрирующий блок
+ * Сетка
  */
+$gutter = 20px;
+$cols = 12;
+
 .container
   margin-left auto
   margin-right auto
   width 940px
-  padding-left 10px
-  padding-right 10px
+  padding-left  ($gutter/2)
+  padding-right ($gutter/2)
+
+.grid-row
+  margin-left  -($gutter/2)
+  margin-right -($gutter/2)
+  font-size 0
+
+.grid-cell
+  display inline-block
+  vertical-align top
+  box-sizing border-box
+  font-size 1rem
+  padding-left  ($gutter/2)
+  padding-right ($gutter/2)
+
+for $index in (1..$cols)
+  .grid-cell_{$index}-{$cols}
+    width "calc(100% * %s / %s)" % ($index $cols)

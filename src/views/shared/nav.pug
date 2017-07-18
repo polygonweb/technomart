@@ -1,0 +1,11 @@
+mixin nav(items, activeItem)
+	nav.main-nav
+		ul.main-nav-list
+			each item in navItems
+				li.main-nav-list__item(
+					class=(item.text.toLowerCase() === activeItem.toLowerCase()
+						? 'main-nav-list__item_active'
+						: ''
+					)
+				)
+					a.main-nav-list__link(href=item.link) #{item.text}
