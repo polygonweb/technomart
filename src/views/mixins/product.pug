@@ -1,0 +1,16 @@
+mixin productCard(attrs)
+	.product-card(class={ 'is-new': attrs.isNew })
+		.product-card__head
+			img.product-card__img(src=attrs.image, alt=attrs.title)
+			.product-card__tools
+				button.product-card__tools-btn.btn.btn_fill(data-modal=`{ "target": "#add-cart-message", "action": "open" }`)
+					+icon("basket")
+					| Купить
+				button.product-card__tools-btn.btn.btn_outline В закладки
+
+		h4.product-card__title #{attrs.title}
+
+		if (attrs.oldPrice)
+			del.product-card__old-price #{attrs.oldPrice} Р.
+		.product-card__price-wrapper
+			.product-card__price #{attrs.price} Р.
