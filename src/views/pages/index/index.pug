@@ -1,0 +1,16 @@
+extends /shared/layout
+
+block vars
+	-
+		user = { name: 'Равшан Джамшутович' };
+		user = null;
+		pageTitle = "Главная";
+
+block content
+
+	.container
+		include /partials/categories
+		include /partials/popular
+		include /partials/vendors
+	include /partials/services
+	include /partials/about
