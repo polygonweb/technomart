@@ -1,5 +1,5 @@
 const BASE_URL = 'https://maps.googleapis.com/maps/api/js?key=';
-const API_KEY = 'AIzaSyATChWoThtyf2pUXNHJY-rS_rSR9Ev2THw';
+const API_KEY = 'AIzaSyCULdjmspwskYFN6iKnsHPK5u_Lkmi-iNY';
 
 function getScriptUrl() {
   return BASE_URL + API_KEY;
